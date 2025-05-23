@@ -33,10 +33,12 @@ public class Board {
     }
 
     public Boolean isInFavorOfO() {
+
         return !isTie() && isInFavorOfX() == false;
     }
 
     public Boolean isTie() {
+
         return getWinner() == "";
     }
 
@@ -44,7 +46,7 @@ public class Board {
         Character[][] board = this.matrix;
 
 
-        //Check Diagonal
+        //Check Diagonal endpoints
         if(board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == 'X'){
             return "X";
         } else if(board[2][0] == 'X' && board[1][1] == 'X' && board[0][2] == 'X'){
